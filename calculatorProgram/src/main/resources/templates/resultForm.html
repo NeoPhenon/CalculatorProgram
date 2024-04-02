@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title> Fabricated calculation Result:</title>
+</head>
+<style>
+	body{
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		flex-direction:column;
+		}
+	h1{
+		font-family:"monospace";
+		color:green;
+	}
+	.resultMessage{
+		font-size:2rem;
+		font-family:"monospace";
+		color:blue;	
+	}
+	.textResult{
+         font-size: 2rem;
+         font-family: "monospace";
+         color: blue;
+	}
+	.errorMessage{
+		font-size:2rem;
+		color:red;
+		width:100%;
+		text-align:center;
+	}
+</style>
+<body>
+	<h1>Calculation Result</h1>
+	<div class = "textResult">Result:</div>
+	<div th:if = "${result}" th:text = "${result}" class = "resultMessage"></div>
+	
+	<div th:if = "${error}" th:text = "${error}" class = "errorMessage"></div>
+</body>
+</html>
